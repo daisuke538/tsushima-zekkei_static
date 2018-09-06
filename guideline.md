@@ -70,16 +70,31 @@ headerとfooterはパーツ化して、管理しています。
 (http://qiita.com/oreo3@github/items/622fd6a09d5c1593fee4)[http://qiita.com/oreo3@github/items/622fd6a09d5c1593fee4]
 (http://www.task-notes.com/entry/20141130/1417319179)[http://www.task-notes.com/entry/20141130/1417319179]
 
+#### グローバル（済んでいるなら不要）
+
+- `brew update` Homebrewをアップデート
+- `brew install node` Node.jsをインストール（同時にnpmもインストールされる）
+- `node -v` Node.jsのバージョン確認
+※グローバルへのgulpのインストールは今時ではないらしい。
+
+#### ローカル（作業ディレクトリ）
+
+- `cd working_dir` 作業ディレクトリに移動
+- `npm init` package.jsonの作成
+- `npm install --save-dev gulp` gulpをインストール
+- `node -v` Node.jsのバージョン確認
+- `npm install --save-dev プラグイン名` プラグインインストール
+
 ### 汎用コマンド
 
 インストールしているプラグイン一覧表示コマンド
 `npm list --depth=0`
 
 プラグインインストールコマンド
-`npm install --save-dev プラグイン名``
+`npm install --save-dev プラグイン名`
 
 プラグインアンインストールコマンド
-`npm uninstall --save-dev プラグイン名``
+`npm uninstall --save-dev プラグイン名`
 
 gulp実行コマンド
 `npm start`
@@ -94,19 +109,24 @@ node_modulesフォルダは管理外とします。
 グローバルの gitignoreファイル の場所は /User/username/.gitignore_global です。
 不可視ファイルなので、可視化できるようにしてください。
 
-### インストール済みモジュール
+### 基本インストールプラグイン
 
-- plumber     ：Sass等のコンパイルエラーが起きてもwatchを継続させる
-- ejs         ：htmlテンプレートエンジン
-- sass        ：sassのコンパイル
-- autoprefixer：cssにプレフィックスを自動付与
-- browserSync ：ライブリロード
-- combineMq   ：複数箇所のメディアクエリを一つにまとめる
-- notify      ：エラーを知らせる
+`npm install --save-dev プラグイン名`
+
+- gulp-plumber     ：Sass等のコンパイルエラーが起きてもwatchを継続させる
+- gulp-ejs         ：htmlテンプレートエンジン
+- gulp-sass        ：sassのコンパイル
+- gulp-autoprefixer：cssにプレフィックスを自動付与
+- gulp-csscomb     ：cssのプロパティ順序整理
+- browser-sync     ：ライブリロード
+- gulp-combine-mq  ：複数箇所のメディアクエリを一つにまとめる
+- gulp-notify      ：エラーを知らせる
+- gulp-imagemin    ：画像のロスレス圧縮
+- imagemin-jpegtran：JPEG画像圧縮（imageminのオプション付与）
 
 ### Gulp起動方法
 
-- プロジェクトフォルダに package.json と gulpfile.js をコピペ。
+- プロジェクトフォルダに package.json と gulpfile.js と .csscomb.json をコピペ。
 - ターミナルでプロジェクトフォルダに移動して、npm install を実行。
 - ターミナルで npm start を実行すると、gulpがスタート。
 - 動作させた後は、ターミナルを触る必要はありません。

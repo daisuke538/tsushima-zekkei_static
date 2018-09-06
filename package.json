@@ -1,0 +1,24 @@
+{
+  "main": "gulpfire.js",
+  "scripts": {
+    "start": "gulp",
+    "release": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frenel-komiya/tsushima-zekkei_static.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-ejs": "^3.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "imagemin-jpegtran": "^5.0.2"
+  }
+}
