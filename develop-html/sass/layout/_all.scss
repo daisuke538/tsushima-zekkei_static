@@ -1,0 +1,21 @@
+/*
+ widthやmarginなど、エリア分けのみを行う。
+*/
+.l-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix()
+}
+
+.l-header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.l-footer {
+
+}
+
+.l-side-bar {
+
+}

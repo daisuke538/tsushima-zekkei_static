@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="" />
+<!-- ogp等のmeta情報はWordPressのプラグインで設定 -->
+<meta name="google-site-verification" content="" />
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="javascripts/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="javascripts/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body id="top">
+
+<header class="l-header header">
+<% if ( page === 'top' ) { %>
+
+<% } else if ( page === 'page' ) { %>
+
+<% } %>
+
+  <div class="header__catchphrase">
+		<section class="header__catchphrase__text">
+			<p>対馬のことが気になってくるWebメディア</p>
+		</section>
+		<div class="header__catchphrase__search-button">
+      <img class="header__catchphrase__search-button__icon" src="./images/search-icon.png" alt="" />
+    </div>
+	</div>
+
+	<div class="header__searchbox is-searchbox-display">
+		<form action="" method="post">
+			<input class="header__searchbox__input" type="search" placeholder="キーワードで探す"/>
+			<input class="header__searchbox__search" type="submit" value="検索" />
+		</form>
+	</div>
+
+	<div class="header__service-logo">
+		<div class="header__service-logo__image-box">
+			<img class="header__service-logo__image-box__image" src="./images/main-logo.png" alt="対馬絶景" />
+		</div>
+		<div class="header__service-logo__translation">
+
+		</div>
+	</div>
+
+  <nav class="header__nav">
+    <ul class="header__nav__menu">
+      <li class="header__nav__menu__about">
+        <div class="header__nav__menu__about__heading">
+          <a class="header__nav__menu__about__heading__link" href="">
+          <div class="header__nav__menu__about__heading__name">
+  				  <span class="header__nav__menu__about__heading__name--ja">対馬絶景について</span>
+  				  <span class="header__nav__menu__about__heading__name--en">ABOUT</span>
+  				</div>
+          </a>
+        </div>
+      </li>
+      <li class="header__nav__menu__categories">
+        <div class="header__nav__menu__categories__heading">
+          <div class="header__nav__menu__categories__heading__name">
+  				  <span class="header__nav__menu__categories__heading__name--ja">カテゴリー</span>
+  				  <span class="header__nav__menu__categories__heading__name--en">CATEGORIES</span>
+  				</div>
+  				<div class="header__nav__menu__categories__heading__image"><img class="header__nav__menu__categories__heading__image__icon" src="./images/down-arrow.png" alt="下矢印" /></div>
+        </div>
+        <ul class="header__nav__menu__categories__subhead is-nav-categories-display">
+          <li class="header__nav__menu__categories__subhead__category is-border-right-display"><a class="header__nav__menu__categories__subhead__category__link" href="">島を支える人</a></li>
+  			  <li class="header__nav__menu__categories__subhead__category"><a class="header__nav__menu__categories__subhead__category__link" href="">絶品グルメ</a></li>
+  				<li class="header__nav__menu__categories__subhead__category is-border-right-display"><a class="header__nav__menu__categories__subhead__category__link" href="">絶景・秘境</a></li>
+  				<li class="header__nav__menu__categories__subhead__category"><a class="header__nav__menu__categories__subhead__category__link" href="">泊まりたい宿</a></li>
+  				<li class="header__nav__menu__categories__subhead__category is-border-right-display"><a class="header__nav__menu__categories__subhead__category__link" href="">注目スポット</a></li>
+  				<li class="header__nav__menu__categories__subhead__category"><a class="header__nav__menu__categories__subhead__category__link" href="">記憶に残る体験</a></li>
+  				<li class="header__nav__menu__categories__subhead__category is-border-right-display"><a class="header__nav__menu__categories__subhead__category__link" href="">島で働く</a></li>
+  				<li class="header__nav__menu__categories__subhead__category"><a class="header__nav__menu__categories__subhead__category__link" href="">島で暮らす</a></li>
+  				<li class="header__nav__menu__categories__subhead__category is-border-right-display"><a class="header__nav__menu__categories__subhead__category__link" href="">島のイベント</a></li>
+        </ul>
+      </li>
+      <li class="header__nav__menu__tags">
+        <div class="header__nav__menu__tags__heading">
+          <div class="header__nav__menu__tags__heading__name">
+  				  <span class="header__nav__menu__tags__heading__name--ja">キーワード</span>
+  				  <span class="header__nav__menu__tags__heading__name--en">KEYWORDS</span>
+  				</div>
+  				<div class="header__nav__menu__tags__heading__image"><img class="header__nav__menu__tags__heading__image__icon" src="./images/down-arrow.png" alt="下矢印" /></div>
+        </div>
+        <ul class="header__nav__menu__tags__subhead is-nav-tags-display">
+          <ul class="header__nav__menu__tags__subhead__list">
+    			  <li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#上対馬エリア</a></li>
+    			  <li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#下対馬エリア</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#中対馬エリア</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#厳原町</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#美津島町</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#仁位</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#ふれあい処つしま</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#対馬バーガーKiYo</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#厳原港</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#浅茅湾</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#キャンプ</a></li>
+    				<li class="header__nav__menu__tags__subhead__list__tag"><a class="header__nav__menu__tags__subhead__list__tag__link" href="">#国境マラソン</a></li>
+  			  </ul>
+          <a class="header__nav__menu__tags__subhead__list__button" href="">キーワード一覧を見る</a>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+</header>

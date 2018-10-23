@@ -1,0 +1,49 @@
+html {
+	font-size: 62.5%; // 10px
+}
+
+body {
+	min-width: 100%;
+	margin: 0 auto;
+	font-family: $yugo;
+	@include font( 16, 26 )
+	-webkit-font-smoothing: antialiased; // アンチエイリアスを調整する（細いフォントを綺麗に見せる）
+  -moz-osx-font-smoothing: grayscale; // アンチエイリアスを調整する（細いフォントを綺麗に見せる）
+	color: $black;
+	text-align: justify;
+
+	@include mq( sp ){
+		min-width: 0;
+		@include font( 14, 24 )
+	}
+
+	&.is-fixed{
+		position: fixed;
+		width: 100%;
+	}
+}
+
+a {
+	text-decoration: none;
+	&:hover{
+
+	}
+}
+
+img {
+	display: block;
+	height: auto;
+}
+
+button {
+	display: block;
+	height: auto;
+}
+
+main {
+	background: #FAFAFA;
+
+	@include mq( pc ) {
+		padding-top: 30px;
+  }
+}

@@ -1,0 +1,30 @@
+.is-searchbox-display {
+  display: none;
+}
+
+.is-nav-categories-display,
+.is-nav-tags-display {
+  display: none;
+}
+
+.is-border-right-display {
+  border-right: 1px solid $white;
+
+  @include mq( pc ) {
+    border-right: 0;
+  }
+}
+
+.is-border-bottom-display {
+  border-bottom: 1px solid $white;
+
+  @include mq( pc ) {
+    border-bottom: 0;
+  }
+}
+
+.is-separate-line-display {
+  @include mq( pc ) {
+    display: none;
+  }
+}

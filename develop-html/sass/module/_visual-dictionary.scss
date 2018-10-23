@@ -1,0 +1,141 @@
+.visual-dictionary {
+  width: 90%;
+  margin: 0 auto;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+
+  }
+
+  &__contents {
+    //border: 1px solid;
+  }
+
+  &__contents__tabs {
+    display: flex;
+    //justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    @include clearfix()
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+
+    }
+
+    & input:checked + &--item {
+      color: $white;
+      background: #FFD151;
+    }
+
+    & input {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__contents__tabs--item {
+    display: block;
+    width: calc( 100% / 3 - 4px );
+    height: 39px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    color: $black;
+    @include font( 18, 43 )
+    font-weight: 700;
+    border-bottom: 3px solid #FFD151;
+    background-color: $white;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+
+  &__contents__tabs--item:hover {
+    opacity: 0.75;
+  }
+
+  &__contents__tabs--item:nth-child( 3n ) {
+    margin-right: 0;
+  }
+
+  input[name="visual-dictionary__contents__tabs--item"] {
+    display: none;
+  }
+
+  &__contents__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    @include mq( pc ) {
+
+    }
+  }
+
+  &__contents__list__card {
+    width: 48%;
+    margin-bottom: 15px;
+
+    @include mq( tablet ) {
+      margin-bottom: 20px;
+    }
+
+    @include mq( pc ) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contents__list__card__image__link {
+
+  }
+
+  &__contents__list__card__image {
+    width: 100%;
+  }
+
+  &__contents__list__card__caption {
+    width: 100%;
+    height: 43px;
+    padding: 10px 0;
+    @include font( 12, 14 )
+    font-weight: 700;
+    background: $white;
+    text-align: center;
+  }
+
+  &__contents__list__card__title__link {
+    width: 100%;
+    height: 100%;
+    color: $black;
+  }
+
+  &__contents__list__card__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    overflow: hidden;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+      @include font( 12, 15 )
+      overflow: hidden;
+      height: calc( 1.3 * 3em );
+      line-height: 1.3;
+    }
+  }
+}

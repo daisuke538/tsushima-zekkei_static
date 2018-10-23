@@ -1,0 +1,32 @@
+.tsushimap {
+  width: 90%;
+  margin: 0 auto;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+
+  }
+
+  &__contents {
+    width: 100%;
+    //border: 1px solid;
+  }
+
+  &__contents__google-map {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+      height: 350px;
+    }
+  }
+
+}

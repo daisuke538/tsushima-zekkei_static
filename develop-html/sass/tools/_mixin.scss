@@ -1,0 +1,49 @@
+@mixin opacity( $opacity ) {
+	opacity: $opacity;
+	filter: alpha( opacity=( $opacity * 100 ) );
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin font( $font-size, $line-height ) {
+	$rem: $font-size / 10; // 10 = 16px × 62.5%（_base.scssで設定した値）
+	$linS: $line-height / $font-size;
+	font-size: #{$rem}rem;
+	line-height: $linS;
+}
+
+
+/* media quary */
+$bp-small: '( max-width: 600px )'; // スマートフォン
+$bp-medium: '( min-width: 601px ) and ( max-width: 960px )'; // タブレット
+$bp-large: '( min-width: 961px )'; // パソコン
+
+@mixin mq( $media ) {
+	@if $media == sp {
+		@media screen and #{$bp-small} {
+			@content;
+		}
+	}
+
+	@if $media == tablet {
+		@media screen and #{$bp-medium} {
+			@content;
+		}
+	}
+
+  @if $media == pc {
+		@media screen and #{$bp-large} {
+			@content;
+		}
+	}
+}

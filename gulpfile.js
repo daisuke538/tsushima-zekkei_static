@@ -4,8 +4,10 @@
 =====================================
 */
 var gulp         = require( 'gulp' ),
+    fs           = require( 'fs' ),
 		plumber      = require( 'gulp-plumber' ), // エラーが原因でタスクが強制停止することを防止する
 		ejs          = require( 'gulp-ejs' ),
+		rename       = require( 'gulp-rename' ),
 		sass         = require( 'gulp-sass' ),
 		autoprefixer = require( 'gulp-autoprefixer' ),
 		cssComb      = require( 'gulp-csscomb' ), // CSSのプロパティ順序を整理する
@@ -33,7 +35,7 @@ var config = {
 			//"imageDir"         : develop + "images/**/*.{jpg,jpeg,png,gif}",
 			"ejsDir"           : develop + "ejs/**/*.ejs", // コンパイルしたいejsファイルがある場所
 			"templateDir"      : develop + "ejs/templates/_*.ejs", // templateDirはテンプレートejsファイルがある場所
-			"afterCompileEjs"  : develop, // コンパイルしたhtmlファイルを吐き出す場所
+			"afterCompileEjs"  : develop // コンパイルしたhtmlファイルを吐き出す場所
 	 }
 }
 
@@ -44,14 +46,14 @@ gulpの実行
 */
 gulp.task( 'default', function(){
 	// 監視
-	gulp.watch([ config.path.ejsDir, config.path.templateDir ], [ 'ejs' ] );
-	gulp.watch([ config.path.sassCompile ], [ 'sass' ] );
-	gulp.watch([ config.path.imageDir ], [ 'imagemin' ] );
-	gulp.watch([ develop + '**/*.html', develop + 'js/*.js' ], [ 'reload' ] );
+	gulp.watch( [config.path.ejsDir, config.path.templateDir], ['ejs'] );
+	gulp.watch( [config.path.sassCompile], ['sass'] );
+	//gulp.watch( [config.path.imageDir], ['imagemin'] );
+	gulp.watch( [develop + '**/*.html', develop + 'js/*.js'], ['reload'] );
 
 	// サーバー起動
 	browserSync({
-		server:{
+		server: {
 			baseDir: './' + develop // ルートとなるディレクトリ
 			// proxy: 'localhost:8888/wordpress'
 		}
@@ -59,24 +61,25 @@ gulp.task( 'default', function(){
 
 	// ejsファイルのコンパイル
 	gulp.task( 'ejs', function(){
-		gulp.src([ config.path.ejsDir, '!' + config.path.templateDir, '!' + config.path.templateDir ])
+		gulp.src( [ config.path.ejsDir, '!' + config.path.templateDir ] )
 		    .pipe( plumber({
 			    errorHandler: notify.onError( 'Error: <%= error.message %>' ) // エラーがあればデスクトップに通知
 		    }) )
-		    .pipe( ejs( {}, { ext: '.html' } ) ) // コンパイル時に拡張子の指定が必須
+				.pipe( ejs( {}, {}, { ext: '.html' } ) )
+				//.pipe( rename({ extname: '.html' }) )
 		    .pipe( gulp.dest( config.path.afterCompileEjs ) );
 	});
 
 	// sassファイルのコンパイルとプレフィックスの付与
 	gulp.task( 'sass', function(){
-		gulp.src([ config.path.sassCompile, '!' + config.path.sassModule ])
+		gulp.src( [config.path.sassCompile, '!' + config.path.sassModule] )
 		    .pipe( plumber({
 			    errorHandler: notify.onError( 'Error: <%= error.message %>' ) // エラーがあればデスクトップに通知
 		    }) )
 		    .pipe( sass() )
-		    .pipe( autoprefixer({
-					browsers: [ 'last 3 versions', 'ie >=10', 'android >=4.2' ]
-				}) ) // プレフィックスを付与
+		    .pipe( autoprefixer( {
+					browsers: ['last 3 versions', 'ie >=10', 'android >=4.2']
+				} ) ) // プレフィックスを付与
 				.pipe( cssComb() )
 		    .pipe( gulp.dest( config.path.afterCompileSass ) ) // 一度コンパイルしてから
 		    .pipe( combineMq() ) // cssを整形
@@ -85,6 +88,7 @@ gulp.task( 'default', function(){
 	});
 
 	// 画像圧縮
+  /*
 	gulp.task( 'imagemin', function(){
 		gulp.src( config.path.imageDir )
 		    .pipe( plumber({
@@ -103,6 +107,7 @@ gulp.task( 'default', function(){
 				]) )
 				.pipe( gulp.dest( config.path.imageDir ) );
 	});
+  */
 
 	// ブラウザの自動リロード
 	gulp.task( 'reload', function(){

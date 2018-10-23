@@ -1,0 +1,126 @@
+.ranking {
+  width: 90%;
+  margin: 0 auto;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+
+  }
+
+  &__contents {
+    //border: 1px solid;
+  }
+
+  &__contents__tabs {
+    display: flex;
+    //justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    @include clearfix()
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+
+    }
+
+    & input:checked + &--item {
+      color: $white;
+      background: #FFD151;
+    }
+
+    & input {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__contents__tabs--item {
+    display: block;
+    width: calc( 100% / 3 - 4px );
+    height: 39px;
+    margin-right: 6px;
+    color: $black;
+    @include font( 18, 43 )
+    font-weight: 700;
+    border-bottom: 3px solid #FFD151;
+    background-color: $white;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+
+  &__contents__tabs--item:hover {
+    opacity: 0.75;
+  }
+
+  &__contents__tabs--item:nth-child( 3n ) {
+    margin-right: 0;
+  }
+
+  input[name="ranking__contents__tabs--item"] {
+    display: none;
+  }
+
+  &__contents__list {
+    display: none;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+
+  &__contents__list__card {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+    @include clearfix()
+  }
+
+  &__contents__list__card__rank {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: $white;
+    font-family: 'Lato';
+    @include font( 12, 30 )
+    font-weight: 700;
+    background: $black;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  &__contents__list__card__image__link {
+    float: left;
+    width: calc( 50% - 16px );
+  }
+
+  &__contents__list__card__image {
+    width: 100%;
+  }
+
+  &__contents__list__card__caption {
+    float: left;
+    width: 50%;
+    padding: 8px 8px;
+    background: $white;
+  }
+
+  &__contents__list__card__title__link {
+
+  }
+
+  &__contents__list__card__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: $black;
+    @include font( 11, 14 )
+    font-weight: 700;
+    line-height: 14px;
+  }
+}
