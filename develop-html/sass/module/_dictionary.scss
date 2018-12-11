@@ -1,0 +1,121 @@
+.dictionary {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+
+  }
+
+  &__eyecatch {
+    width: 100%;
+  }
+
+  &__eyecatch__image {
+    width: 100%;
+  }
+
+  &__contents {
+    width: 90%;
+    margin: 0 auto;
+
+    @include mq( pc ) {
+      width: 100%;
+    }
+  }
+
+  &__contents__title {
+    margin-top: 15px;
+    padding: 10px 10px;
+    @include font( 14, 16 )
+    font-weight: 700;
+    background-color: $white;
+    text-align: center;
+
+    @include mq( tablet ) {
+      padding: 15px;
+      @include font( 16, 20 )
+    }
+
+    @include mq( pc ) {
+      padding: 15px;
+      @include font( 18, 24 )
+    }
+  }
+
+  &__contents__body {
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: $white;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+
+    }
+  }
+
+  &__contents__body__heading {
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    color: $white;
+    @include font( 14, 36 )
+    font-weight: 700;
+    background-color: $light-blue;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+      height: 45px;
+      @include font( 16, 44 )
+    }
+  }
+
+  &__contents__body__description {
+    padding: 15px 15px 30px 15px;
+    @include font( 12, 20 )
+    text-align: justify;
+    text-justify: inter-ideograph;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+      @include font( 14, 24 )
+    }
+  }
+
+  &__contents__body__description__link {
+    color: $light-blue;
+  }
+
+  &__contents__body__description__address {
+    margin-bottom: 15px;
+  }
+
+  &__contents__body__description__map {
+    width: 100%;
+    height: 200px;
+
+    @include mq( tablet ) {
+      height: 300px;
+    }
+
+    @include mq( pc ) {
+      height: 300px;
+    }
+  }
+}

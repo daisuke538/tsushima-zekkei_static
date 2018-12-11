@@ -122,5 +122,10 @@
     @include font( 11, 14 )
     font-weight: 700;
     line-height: 14px;
+
+    @include mq( tablet ) {
+      @include font( 16, 22 )
+      padding: 10px 10px;
+    }
   }
 }

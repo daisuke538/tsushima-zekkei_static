@@ -15,12 +15,25 @@
 
 /* Module */
 @import 'module/header';
+@import 'module/articles-card';
 @import 'module/main';
 @import 'module/special-feature';
+@import 'module/special-feature-list';
 @import 'module/latest-articles';
 @import 'module/ranking';
 @import 'module/visual-dictionary';
 @import 'module/tsushimap';
+@import 'module/event-calendar';
+@import 'module/writer-list';
+@import 'module/footer';
+@import 'module/breadcrumb';
+@import 'module/article';
+@import 'module/share-button';
+@import 'module/related-articles';
+@import 'module/articles-list';
+@import 'module/pagination';
+@import 'module/dictionary';
+@import 'module/writer';
 
 /* State */
 @import 'state/state';

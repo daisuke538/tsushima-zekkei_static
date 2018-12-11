@@ -1,4 +1,16 @@
-.latest-articles {
+.articles-list {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+    width: 100%;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -11,9 +23,5 @@
     @include mq( pc ) {
 
     }
-  }
-
-  &__view-more {
-    margin-top: 20px;
   }
 }

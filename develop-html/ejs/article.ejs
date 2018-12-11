@@ -1,0 +1,95 @@
+<%- include( 'templates/_header', { page: 'top' } ) %>
+
+<main class="l-wrapper">
+  <div class="main-wrapper">
+    <div class="primary-wrapper">
+
+      <%- include( 'templates/_breadcrumb' ) %>
+
+      <article class="article">
+        <div class="article__eyecatch">
+          <img class="article__eyecatch__image" src="./images/article-eyecatch.jpg" alt="" />
+        </div>
+        <div class="article__contents">
+          <div class="article__contents__title">
+            タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。
+          </div>
+          <div class="article__contents__item">
+            <time class="article__contents__item__date">
+              2019.01.01
+            </time>
+            <div class="article__contents__item__category">
+              <a class="article__contents__item__category__link" href="/articles-list.html">絶品グルメ</a>
+            </div>
+            <div class="article__contents__item__author">
+              <a class="article__contents__item__author__link" href="/writer.html">
+                <div class="article__contents__item__author__group">
+                  <img class="article__contents__item__author__group__image" src="./images/komiya-icon.jpg" alt="小宮 大輔" />
+                  <span class="article__contents__item__author__group__name">小宮 大輔</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="article__contents__tags">
+            <ul class="article__contents__tags__group">
+              <li class="article__contents__tags__group__tag"><a class="article__contents__tags__group__tag__link" href="/articles-list.html">#下対馬エリア</a></li>
+              <li class="article__contents__tags__group__tag"><a class="article__contents__tags__group__tag__link" href="/articles-list.html">#厳原町</a></li>
+              <li class="article__contents__tags__group__tag"><a class="article__contents__tags__group__tag__link" href="/articles-list.html">#大手橋</a></li>
+              <li class="article__contents__tags__group__tag"><a class="article__contents__tags__group__tag__link" href="/articles-list.html">#対馬バーガーKIYO</a></li>
+              <li class="article__contents__tags__group__tag"><a class="article__contents__tags__group__tag__link" href="/articles-list.html">#ハンバーガー</a></li>
+              <li class="article__contents__tags__group__tag"><a class="article__contents__tags__group__tag__link" href="/articles-list.html">#タグタグタグタグ</a></li>
+            </ul>
+          </div>
+
+          <%- include( 'templates/_share-button' ) %>
+
+          <div class="article__contents__body">
+            <h2>
+              <span>見出し2（h2）</span>
+              <hr />
+            </h2>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <h3>見出し3（h3）</h3>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+
+            <div class="interviewer">- インタビュアー -</div>
+            <p></p>
+            <div class="interviewee">- インタビュイー -</div>
+            <p></p>
+            <div class="information">
+              <span class="item-name">タイトル：</span>
+              <div class="item-detail">タイトルが入ります。</div>
+              <span class="item-name">開催日：</span>
+              <div class="item-detail">2019年1月1日</div>
+              <span class="item-name">お問い合わせ：</span>
+              <div class="item-detail">
+                <div class="item-detail__name">対馬観光物産協会</div>
+                <a class="item-detail__website" href="https://www.tsushima-net.org/" target="_blank">https://www.tsushima-net.org/</a>
+                <a class="item-detail__email" href="mailto:info@tsushima-net.org" target="_blank">info@tsushima-net.org</a>
+                <a class="item-detail__phone" href="tel:0920-52-1566" target="_blank">0920-52-1566</a>
+              </div>
+            </div>
+          </div>
+
+          <%- include( 'templates/_share-button' ) %>
+
+        </div>
+      </article>
+
+      <%- include( 'templates/_related-articles' ) %>
+
+    </div>
+
+    <%- include( 'templates/_sidebar' ) %>
+
+  </div>
+</main>
+
+<%- include( 'templates/_footer' ) %>

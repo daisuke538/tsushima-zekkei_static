@@ -158,39 +158,52 @@
     }
   }
 
-  &__service-logo {
-    position: relative;
-    top: 50px;
-    width: 100%;
-    padding-bottom: 50px;
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
 
     @include mq( tablet ) {
-      top: 65px;
+      width: 100%;
+    }
+
+    @include mq( pc ) {
+      height: 170px;
+    }
+  }
+
+  &__service-logo {
+    position: relative;
+    top: 40px;
+    width: 100%;
+    padding-bottom: 35px;
+
+    @include mq( tablet ) {
+      top: 52px;
       float: left;
-      width: 280px;
+      width: 170px;
       padding-bottom: 60px;
     }
 
     @include mq( pc ) {
-      top: 65px;
+      top: 55px;
       float: left;
       width: 400px;
-      padding-bottom: 60px;
+      //padding-bottom: 60px;
     }
   }
 
   &__service-logo__image-box {
-    width: 100px;
-    margin-left: 15px;
+    width: 80px;
+    margin: 0 auto;
 
     @include mq( tablet ) {
-      width: 130px;
-      margin-left: 14px;
+      width: 75px;
+      margin-left: 8px;
     }
 
     @include mq( pc ) {
-      width: 180px;
-      margin-left: 14px;
+      width: 100px;
+      margin-left: -10px;
     }
   }
 
@@ -208,7 +221,7 @@
     @include mq( tablet ) {
       top: 36px;
       width: 100%;
-      padding-top: 20px;
+      padding-top: 25px;
       padding-left: 6px;
     }
 
@@ -217,21 +230,24 @@
       float: left;
       width: 400px;
       height: 60px;
-      padding-top: 40px;
-      padding-bottom: 70px;
+      padding-top: 55px;
+      //padding-bottom: 70px;
     }
   }
 
   &__nav__menu {
     display: flex;
+    justify-content: space-between;
     position: relative;
     @include clearfix()
 
     @include mq( tablet ) {
+      justify-content: flex-start;
       margin-top: 19px;
     }
 
     @include mq( pc ) {
+      justify-content: flex-start;
       margin-top: -5px;
     }
   }
@@ -373,11 +389,24 @@
     @include clearfix()
 
     @include mq( tablet ) {
+      left: 60px;
       width: 220px;
     }
 
     @include mq( pc ) {
+      left: 83px;
       width: 220px;
+    }
+  }
+
+  &__nav__menu__tags__subhead {
+    @include mq( tablet ) {
+      left: 130px;
+      width: 220px;
+    }
+
+    @include mq( pc ) {
+      left: 170px;
     }
   }
 

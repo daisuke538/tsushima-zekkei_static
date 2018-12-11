@@ -1,0 +1,112 @@
+.share-button {
+  margin-top: 15px;
+
+  &__list {
+    display: flex;
+	  justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list__item {
+    flex-grow: 1;
+    height: 30px;
+    line-height: 30px;
+    min-width: 50px;
+    text-align: center;
+
+    @include mq( tablet ) {
+      height: 40px;
+      line-height: 40px;
+      min-width: 80px;
+    }
+
+    @include mq( pc ) {
+      height: 40px;
+      line-height: 40px;
+      min-width: 80px;
+    }
+  }
+
+  &__list__link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__list__link::before {
+    font-size: 14px;
+    display: block;
+    transition: ease-in-out .2s;
+
+    @include mq( tablet ) {
+      font-size: 16px;
+    }
+
+    @include mq( pc ) {
+      font-size: 18px;
+    }
+  }
+
+  &__list__link:hover::before {
+    background: #ffffff;
+    transform: scale( 1.1 );
+    box-shadow: 1px 1px 4px 0px rgba( 0, 0, 0, 0.15 );
+  }
+
+  // Twitter
+  &__list__link.icon-twitter {
+    background:#55acee;
+  }
+
+  &__list__link.icon-twitter:hover::before {
+    color: #55acee;
+  }
+
+  // Facebook
+  &__list__link.icon-facebook {
+    background: #3B5998;
+  }
+
+  &__list__link.icon-facebook:hover::before {
+    color: #3B5998;
+  }
+
+  // はてブ
+  &__list__link.icon-hatebu {
+    background: #008FDE;
+  }
+
+  &__list__link.icon-hatebu:hover::before {
+    color: #008FDE;
+  }
+
+  // RSS
+  &__list__link.icon-rss {
+    background: #ff9900;
+  }
+
+  &__list__link.icon-rss:hover::before {
+    color: #ff9900;
+  }
+
+  // Feedy
+  &__list__link.icon-feedly {
+    background: #6cc655;
+  }
+
+  &__list__link.icon-feedly:hover::before {
+    color: #6cc655;
+  }
+
+  // LINE
+  &__list__link.icon-line {
+    background: #1dcd00;
+  }
+
+  &__list__link.icon-line:hover::before {
+    color: #1dcd00;
+  }
+}

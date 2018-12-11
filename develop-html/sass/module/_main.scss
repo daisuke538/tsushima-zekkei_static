@@ -1,5 +1,6 @@
 .main-wrapper {
   margin: 0 auto;
+  background-color: #fafafa;
 
   @include mq( pc ) {
     width: 90%;
@@ -91,7 +92,7 @@
   padding-top: 30px;
 
   @include mq( tablet ) {
-    width: 600px;
+    //width: 600px;
   }
 
   @include mq( pc ) {

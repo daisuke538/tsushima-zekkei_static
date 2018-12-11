@@ -1,0 +1,58 @@
+.pagination {
+  width: 100%;
+  margin-top: 25px;
+  //overflow: hidden;
+  font-family: 'Lato';
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__list__item {
+    margin: 0 2px 5px 2px;
+    border: 1px solid #44AF69;
+
+    @include mq( pc ) {
+      margin: 0 5px 5px 5px;
+    }
+  }
+
+  &__list__item.current{
+    font-weight: 700;
+  }
+
+  &__list__item span,
+  &__list__item__link {
+    display: block;
+    padding: 0.4em 0.9em 0.5em 0.9em;
+    @include font( 11, 20 )
+    background-color: $white;
+
+    @include mq( tablet ) {
+      padding: 0.5em 0.9em;
+      @include font( 13, 22 )
+    }
+
+    @include mq( pc ) {
+      padding: 0.5em 0.9em;
+      @include font( 13, 22 )
+    }
+  }
+
+  &__list__item span {
+
+  }
+
+  &__list__item__link {
+    color: #FFF;
+    background: #44AF69;
+    text-decoration: none;
+  }
+
+  &__list__item__link:hover {
+    color: #000;
+    background: #FFF;
+  }
+}

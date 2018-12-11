@@ -1,0 +1,46 @@
+.breadcrumb *, .breadcrumb *::after, .breadcrumb *::before {
+  box-sizing: border-box;
+}
+
+.breadcrumb {
+  width: 100%;
+  padding: 8px 0 10px 0;
+	background-color: $light-blue;
+	color: $white;
+  @include font( 10, 16 )
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    @include clearfix()
+  }
+
+  &__list__item {
+    display: inline;
+  }
+
+  &__list__item::before {
+    padding-left: 5px;
+    content: " > ";
+  }
+
+  &__list__item:first-child::before {
+    padding-left: 0;
+    content: '';
+  }
+
+  &__list__item__link {
+    color: $white;
+    text-decoration: underline;
+  }
+}

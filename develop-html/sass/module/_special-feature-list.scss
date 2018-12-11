@@ -1,0 +1,70 @@
+.special-feature-list {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    padding: 15px 15px;
+    //color: $white;
+    color: $light-blue;
+    @include font( 14, 16 )
+    font-weight: 700;
+    text-align: center;
+    background-color: $white;
+    border: 3px solid $light-blue;
+
+    @include mq( tablet ) {
+      padding: 15px;
+      @include font( 16, 20 )
+    }
+
+    @include mq( pc ) {
+      padding: 15px;
+      @include font( 18, 24 )
+    }
+  }
+
+  &__description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    @include font( 12, 20 )
+    box-sizing: border-box;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+    background-color: $white;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+      @include font( 14, 24 )
+    }
+  }
+}

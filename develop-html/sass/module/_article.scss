@@ -1,0 +1,285 @@
+.article {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+
+  @include mq( tablet ) {
+
+  }
+
+  @include mq( pc ) {
+
+  }
+
+  &__eyecatch {
+    width: 100%;
+  }
+
+  &__eyecatch__image {
+    width: 100%;
+  }
+
+  &__contents {
+    width: 90%;
+    margin: 0 auto;
+
+    @include mq( pc ) {
+      width: 100%;
+    }
+  }
+
+  &__contents__title {
+    margin-top: 15px;
+    padding: 10px 10px;
+    @include font( 14, 16 )
+    font-weight: 700;
+    background-color: $white;
+
+    @include mq( tablet ) {
+      padding: 15px;
+      @include font( 16, 20 )
+    }
+
+    @include mq( pc ) {
+      padding: 15px;
+      @include font( 18, 24 )
+    }
+  }
+
+  &__contents__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+
+  &__contents__item__date {
+    width: 22%;
+    height: 27px;
+    color: #AAAAAA;
+    @include font( 10, 24 )
+    font-family: 'Lato';
+    background-color: $white;
+    text-align: center;
+
+    @include mq( tablet ) {
+      @include font( 12, 28 )
+    }
+
+    @include mq( pc ) {
+      @include font( 12, 28 )
+    }
+  }
+
+  &__contents__item__category {
+    width: 45%;
+    height: 27px;
+    background-color: $white;
+  }
+
+  &__contents__item__category__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: $light-blue;
+    @include font( 12, 27 )
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__contents__item__author {
+    width: 30%;
+    height: 27px;
+    background-color: $white;
+    text-align: center;
+  }
+
+  &__contents__item__author__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: $black;
+  }
+
+  &__contents__item__author__group {
+    display: inline-block;
+    margin-top: -1px;
+  }
+
+  &__contents__item__author__group__image {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-top: 7px;
+    border-radius: 50%;
+  }
+
+  &__contents__item__author__group__name {
+    display: block;
+    float: left;
+    margin-left: 5px;
+    @include font( 10, 28 )
+    font-weight: 700;
+
+    @include mq( tablet ) {
+      @include font( 12, 29 )
+    }
+
+    @include mq( pc ) {
+      @include font( 12, 29 )
+    }
+  }
+
+  &__contents__tags {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: $white;
+
+    @include mq( tablet ) {
+      padding: 10px 15px;
+    }
+
+    @include mq( pc ) {
+      padding: 10px 15px;
+    }
+  }
+
+  &__contents__tags__group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__contents__tags__group__tag {
+    margin-right: 7px;
+    @include font( 11, 20 )
+
+    @include mq( tablet ) {
+      margin-right: 9px;
+      @include font( 12, 22 )
+    }
+
+    @include mq( pc ) {
+      margin-right: 9px;
+      @include font( 12, 22 )
+    }
+  }
+
+  &__contents__tags__group__tag__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: $black;
+  }
+
+  &__contents__body {
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 15px 15px;
+    // 両端揃え
+    text-align: justify;
+    text-justify: inter-ideograph;
+    // 文字詰め
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+    background-color: $white;
+
+    @include mq( tablet ) {
+
+    }
+
+    @include mq( pc ) {
+
+    }
+
+    h2 {
+      color: #41799E;
+      @include font( 16, 24 )
+      font-weight: 700;
+
+      @include mq( tablet ) {
+        @include font( 18, 28 )
+      }
+
+      @include mq( pc ) {
+        @include font( 20, 32 )
+      }
+
+      hr {
+        width: 20px;
+        margin: 5px 0 0 0;
+        border: 1.5px solid #41799E;
+      }
+    }
+
+    h3 {
+      color: #41799E;
+      @include font( 14, 20 )
+      font-weight: 700;
+
+      @include mq( tablet ) {
+        @include font( 16, 24 )
+      }
+
+      @include mq( pc ) {
+        @include font( 18, 28 )
+      }
+    }
+
+    p {
+      margin: 15px 0;
+      @include font( 12, 20 )
+
+      @include mq( tablet ) {
+        @include font( 14, 24 )
+      }
+
+      @include mq( pc ) {
+        @include font( 14, 24 )
+      }
+    }
+
+    .interviewer {
+      color: #44AF69;
+      @include font( 14, 24 )
+      font-weight: 700;
+    }
+
+    .interviewee {
+      color: #FFD151;
+      @include font( 14, 24 )
+      font-weight: 700;
+    }
+
+    .information {
+      padding: 10px;
+      background-color: #FAFAFA;
+      border: 1px solid #AAAAAA;
+
+      .item-name {
+        display: block;
+        @include font( 14, 24 )
+        font-weight: 700;
+      }
+
+      .item-detail {
+        margin: 10px 0;
+        @include font( 14, 24 )
+
+        &__name {
+
+        }
+
+        &__website,
+        &__email,
+        &__phone {
+          display: block;
+          color: $light-blue;
+        }
+      }
+
+      .contact {
+
+      }
+
+    }
+  }
+}
